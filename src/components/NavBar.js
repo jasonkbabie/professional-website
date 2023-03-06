@@ -7,6 +7,7 @@ import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
+
 /*functional component with no parameters for now*/
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
