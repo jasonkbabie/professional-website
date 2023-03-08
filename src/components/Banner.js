@@ -35,7 +35,7 @@ export const Banner = () => {
             setIsDeleting(true);
             setDelta(period);
         } else if (isDeleting && updatedText === ''){
-            setIsDeleting(false);
+            setIsDeleting(false); 
             setLoopNum(loopNum + 1);
             setDelta(500);
         }
@@ -49,7 +49,7 @@ export const Banner = () => {
                         <span className="tagline">Professional Website</span>
                         <h1>{`Hi! I'm Jason K. Babie `}<span className="wrap">{text}</span></h1>
                         <p>I am a Software Developer and Researcher with a passion for automation engineering.</p>
-                        <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25}/></button>
+                        <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header Img"></img>
