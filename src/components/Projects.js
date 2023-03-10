@@ -24,12 +24,12 @@ export const Projects = () => {
         },
     ];
     return(
-        <section className="project" id="project">
+        <section className="project" id="projects">
             <Container>
                 <Row>
                     <Col size={12}>
                     <h2>Projects</h2>
-                    <p>See below for my list of projects (both open source and proprietary code)</p>
+                    <p>See below for a list of projects that I have worked on (both open source and proprietary)</p>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
