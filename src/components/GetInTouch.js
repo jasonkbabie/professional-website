@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import getInTouchImg from "../assets/img/get-in-touch-img.svg";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
-export const Contact = () => {
+export const GetInTouch = () => {
     const formInitialDetails = {
         firstName: '',
         lastName: '',
@@ -43,14 +45,19 @@ export const Contact = () => {
     }
 
     return (
-        <section className="contact" id="contact">
+        <section className="get-in-touch" id="get-in-touch">
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
-                        <img src={contactImg} alt="Contact Me"/>
+                        <img src={getInTouchImg} alt="Contact Me"/>
                     </Col>
                     <Col size={12} md={6}>
-                        <h2>Get In Touch</h2>
+                    <TrackVisibility>
+                    {({isVisible}) =>
+                        <div className={isVisible ? "animate__animated animate__flash": ""}>
+                            <h2>Get In Touch</h2>
+                        </div>}
+                    </TrackVisibility>
                         <form onSubmit={handleSubmit}>
                             <Row>
                                 <Col size={12} sm={6} className="px-1">

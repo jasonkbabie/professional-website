@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from '../assets/img/header-img.svg';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
+import {
+    BrowserRouter as Router
+  } from "react-router-dom";
 
-
+  
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -42,20 +48,27 @@ export const Banner = () => {
     }
 
     return (
-        <section className="banner" id="home">
-            <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Professional Website</span>
-                        <h1>{`Hi! I'm Jason K. Babie `}<span className="wrap">{text}</span></h1>
-                        <p>Software Developer and Researcher with a passion for Generative Pre-trained Transformers, and automation engineering technologies.</p>
-                        <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header Img"></img>
-                    </Col>
-                </Row>
-            </Container>
-        </section>
+        <Router>
+            <section className="banner" id="home">
+                <Container>
+                    <Row className="align-items-center">
+                        <Col xs={12} md={6} xl={7}>
+                            <TrackVisibility>
+                            {({isVisible}) => 
+                            <div className={isVisible ? "animate__animated animate__fadeInRight": ""}>
+                                <span className="tagline">Creating Solutions For A Smarter World!</span>
+                            </div>}
+                            </TrackVisibility>
+                            <h1>Jason K. Babie</h1>
+                            <h1>{``}<span className="wrap">{text}</span></h1>
+                            <p>Software Development and Research are the frontiers of automation and AI. Join me on this exciting journey, where (together) we will build the future, one line of code at a time.</p>
+                        </Col>
+                        <Col xs={12} md={6} xl={5}>
+                            <img src={headerImg} alt="Header Img"></img>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+        </Router>
     );
 }
