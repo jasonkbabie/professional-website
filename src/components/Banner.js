@@ -13,9 +13,10 @@ import {
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["Software Developer", "Researcher"];
+    const toRotate = ["Software Developer", "Researcher", "Angel Investor"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
+    const [index, setIndex] = useState(1);
     const period = 2000;
 
     useEffect(() => {
@@ -37,14 +38,18 @@ export const Banner = () => {
             setDelta(prevDelta => prevDelta / 2);
         }
 
-        if (!isDeleting && updatedText === fullText){
+        if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
+            setIndex(prevIndex => prevIndex - 1);
             setDelta(period);
-        } else if (isDeleting && updatedText === ''){
-            setIsDeleting(false); 
+          } else if (isDeleting && updatedText === '') {
+            setIsDeleting(false);
             setLoopNum(loopNum + 1);
+            setIndex(1);
             setDelta(500);
-        }
+          } else {
+            setIndex(prevIndex => prevIndex + 1);
+          }
     }
 
     return (
@@ -60,8 +65,8 @@ export const Banner = () => {
                             </div>}
                             </TrackVisibility>
                             <h1>Jason K. Babie</h1>
-                            <h1>{``}<span className="wrap">{text}</span></h1>
-                            <p>Software Development and Research are the frontiers of automation and AI. Join me on this exciting journey, where (together) we will build the future, one line of code at a time.</p>
+                            <h1>{``}<span className="txt-rotate" dataPeriod="1000"><span className="wrap">{text}</span></span></h1>
+                            <p>Empowering tomorrow with technology today. Join me on this exciting journey, where together we can build the future, one innovative project at a time!</p>
                         </Col>
                         <Col xs={12} md={6} xl={5}>
                             <img src={headerImg} alt="Header Img"></img>

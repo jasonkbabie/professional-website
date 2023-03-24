@@ -47,8 +47,7 @@ export const NavBar = () => {
                         <Nav className="me-auto">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? "active navbar-link": 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-                        <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
-                        <Nav.Link href="#get-in-touch" className={activeLink === 'get-in-touch' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('get-in-touch')}>Contact</Nav.Link>
+                        <Nav.Link href="#Portfolio" className={activeLink === 'Portfolio' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('Portfolio')}>Portfolio</Nav.Link>
                         </Nav>
                         <span className = "navbar-text">
                             <div className = "social-icon">
@@ -59,9 +58,6 @@ export const NavBar = () => {
                                     <img src={facebookIcon} alt=""></img>
                                 </a>
                             </div>
-                            <HashLink to='#get-in-touch'>
-                                <button className="vvd"><span>Let’s Connect</span></button>
-                            </HashLink>
                         </span>
                     </Navbar.Collapse>
                 </Container>

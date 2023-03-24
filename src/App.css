@@ -118,7 +118,7 @@ p.danger {
 
 /*Footer CSS*/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 50px 0 50px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
@@ -168,10 +168,10 @@ p.danger {
   border-radius: 20px;
   position: absolute;
   z-index: -1;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .new-email-bx input {
@@ -189,7 +189,7 @@ p.danger {
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.5px;
-  border-radius: 19px;
+  border-radius: 18px;
 }
 
 .footer img {
@@ -496,7 +496,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Portfolio Css ************/
 .project {
   padding: 120px 0;
   z-index: -1px;
@@ -558,15 +558,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills .nav-link.active {
     border: 1px solid rgba(255, 255, 255, 1);
 }
-.nav-link#projects-tabs-tab-first {
+.nav-link#Portfolio-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
-.nav-link#projects-tabs-tab-second {
+.nav-link#Portfolio-tabs-tab-second {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.nav-link#projects-tabs-tab-third {
+.nav-link#Portfolio-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
@@ -575,6 +575,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  object-fit: cover;
 }
 .proj-imgbx::before {
   content: "";
@@ -623,14 +624,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Portfolio Css ************/
 .get-in-touch {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
 }
 
 .get-in-touch img {
-  width: 92%;
+  width: 70%;
 }
 
 .get-in-touch h2 {
