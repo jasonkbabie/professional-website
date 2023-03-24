@@ -61,12 +61,12 @@ export const Banner = () => {
                             <TrackVisibility>
                             {({isVisible}) => 
                             <div className={isVisible ? "animate__animated animate__fadeInRight": ""}>
-                                <span className="tagline">Creating Solutions For A Smarter World!</span>
+                                <span className="tagline">Empowering tomorrow with technology today</span>
                             </div>}
                             </TrackVisibility>
                             <h1>Jason K. Babie</h1>
                             <h1>{``}<span className="txt-rotate" dataPeriod="1000"><span className="wrap">{text}</span></span></h1>
-                            <p>Empowering tomorrow with technology today. Join me on this exciting journey, where together we can build the future, one innovative project at a time!</p>
+                            <p>Join me on this exciting journey, where together we can build the future, one innovative project at a time!</p>
                         </Col>
                         <Col xs={12} md={6} xl={5}>
                             <img src={headerImg} alt="Header Img"></img>
